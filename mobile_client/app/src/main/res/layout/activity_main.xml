@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.glebmillenium.mobile_client.MainActivity">
+    tools:context="com.example.glebmillenium.mobile_client.MainActivity"
+    android:orientation="horizontal">
 
-    <TextView
+    <Button
+        android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Настройки"
+        tools:layout_editor_absoluteX="278dp"
+        tools:layout_editor_absoluteY="46dp"
+        android:onClick="onSettingsButtonClick"/>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="10dp">
+
+        <Button
+            android:id="@+id/goodsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Справочник товаров"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="46dp"
+            android:onClick="onGoodsButtonClick"/>
+
+        <Button
+            android:id="@+id/stockButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Товары на складе"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="46dp"
+            android:onClick="onStockButtonClick"/>
+
+    </LinearLayout>
+
+</LinearLayout>

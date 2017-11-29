@@ -18,8 +18,8 @@ using namespace std;
 ConnectorDB::ConnectorDB() {
     try {
         driver = get_driver_instance();
-        con = driver->connect("tcp://127.0.0.1:3306", "vnc", "1111");
-        con->setSchema("vncserver");
+        con = driver->connect("tcp://127.0.0.1:3306", "acc", "1111");
+        con->setSchema("Accounting");
     } catch (sql::SQLException &e) {
         std::cout << "ERR: " << e.what();
         cout << "constructor" << endl;

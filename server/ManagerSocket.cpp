@@ -55,8 +55,7 @@ void ManagerSocket::run()
 
     set<int> clients;
     clients.clear();
-    connectorDB->setDefaultCommandsInAvailaibleTable();
-    connectorDB->setOpcode(1);
+
     while (1) {
         // Заполняем множество сокетов
         fd_set readset;
@@ -95,6 +94,7 @@ void ManagerSocket::run()
                     clients.erase(*it);
                     continue;
                 }
+                printf("in");
                 if(!strcmp(data_client, (char*) "--get"))
                 {
                     char* result = connectorDB->getCommandsFromAvailaibleTable();
