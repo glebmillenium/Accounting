@@ -95,9 +95,11 @@ void ManagerSocket::run()
                     continue;
                 }
                 printf("in");
-                if(!strcmp(data_client, (char*) "--get"))
+                if(!strcmp(data_client, (char*) "--getGoods"))
                 {
-                    char* result = connectorDB->getCommandsFromAvailaibleTable();
+                    //char* result = connectorDB->getCommandsFromAvailaibleTable();
+                    printf("Отправка списка всех товаров");
+                    char* result = "ds\0";
                     send(*it, result, strlen(result), 0);
                 } else if (!strcmp(data_client, (char*) "--opcode")){
                     const char* result = connectorDB->getCurrentOpcode();

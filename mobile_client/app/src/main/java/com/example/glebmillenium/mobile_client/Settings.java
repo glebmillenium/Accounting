@@ -25,7 +25,7 @@ public class Settings extends AppCompatActivity {
         editTextPortServer = (EditText)findViewById(R.id.portServer);
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         String ip = mSettings.getString(APP_PREFERENCES_IP_ADDRESS, "127.0.0.1");
-        String port = mSettings.getString(APP_PREFERENCES_PORT, "6500");
+        String port = mSettings.getString(APP_PREFERENCES_PORT, "536");
         editTextIpServer.setText(ip);
         editTextPortServer.setText(port);
     }
