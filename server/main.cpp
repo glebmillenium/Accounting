@@ -15,7 +15,7 @@ using namespace std;
  */
 int main(int argc, char** argv) 
 {
-    ManagerSocket* mSocket = new ManagerSocket(536);
+    ManagerSocket* mSocket = new ManagerSocket(7000);
     mSocket->run();
 
     return 0;

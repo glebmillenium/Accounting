@@ -76,6 +76,7 @@ void ManagerSocket::run()
         if (FD_ISSET(listener, &readset)) {
             // Поступил новый запрос на соединение, используем accept
             int sock = accept(listener, NULL, NULL);
+            printf("Соединение выполнено успешно!");
             if (sock < 0) {
                 perror("accept");
                 exit(3);

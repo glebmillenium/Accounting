@@ -33,7 +33,7 @@ public class ConnectWithRemoteServer extends Thread {
 
     public ConnectWithRemoteServer() throws IOException
     {
-        this.serverPort = 3425;
+        this.serverPort = 7000;
         this.address = "127.0.0.1";
         socket = new Socket(InetAddress.getByName(address), serverPort);
     }
@@ -43,6 +43,7 @@ public class ConnectWithRemoteServer extends Thread {
         this.serverPort = port;
         this.address = ip;
         socket = new Socket(InetAddress.getByName(address), serverPort);
+        System.out.println("Создал сокет");
     }
 
     public String run(int typeMessage)
