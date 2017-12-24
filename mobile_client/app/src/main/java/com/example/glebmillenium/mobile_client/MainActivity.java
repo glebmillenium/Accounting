@@ -1,8 +1,6 @@
 package com.example.glebmillenium.mobile_client;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStockButtonClick(View v)
     {
-        Intent intent = new Intent(this, Stock.class);
+        Intent intent = new Intent(this, Stocks.class);
         startActivity(intent);
     }
 }
